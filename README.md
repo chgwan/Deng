@@ -22,5 +22,5 @@ https://github.com/chgwan/Deng
 1. LSTM RNN GRU (应该会选择LSTM)
 2. Encoder-Decoder model
 3. Encoder-Decoder model + Attention 
-4. (知乎)[https://zhuanlan.zhihu.com/p/91839581]
-5. (文章参考)[https://arxiv.org/abs/2007.10552]
+4. [知乎介绍](https://zhuanlan.zhihu.com/p/91839581)
+5. [文章参考](https://arxiv.org/abs/2007.10552)
