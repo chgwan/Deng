@@ -53,6 +53,6 @@ if __name__ == "__main__":
             else:
                 for sub_folder in os.listdir(tempPath):
                     sub_folder_path = os.path.join(tempPath, sub_folder)
-                    readDirectory("/scratch/chgwang/XI/data/1/1Normal", col_sour)
+                    readDirectory(sub_folder_path, col_sour)
         
                 
