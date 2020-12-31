@@ -31,9 +31,9 @@ class Inception(nn.Module):
         # Concatenate the outputs on the channel dimension
         return torch.cat((p1, p2, p3, p4), dim=1)
         
-class GoolgeNet(nn.Module):
+class ParallelNet(nn.Module):
     def __init__(self, Inception, output_size):
-        super(GoolgeNet, self).__init__()
+        super(ParallelNet, self).__init__()
         self.b1 = nn.Sequential(nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3),
                         nn.ReLU(),
                         nn.MaxPool2d(kernel_size=3, stride=2, padding=1))
@@ -65,7 +65,7 @@ class GoolgeNet(nn.Module):
         return(y)
 
 if __name__ == "__main__":
-    model = GoolgeNet(Inception, 5)
+    model = ParallelNet(Inception, 5)
     X = torch.rand(size=(1, 1, 3, 20))
     Y = model(X)
     print(Y.size())
