@@ -18,6 +18,10 @@
 
 https://github.com/chgwan/Deng
 
+# Data analysis
+1. 3道信号之间相互有影响，三项电流不能认为是完全独立的
+2. 而且由于是周期性变化的，所以时间关系不是很重要
+3. 那么根据CNN的用途，应该是可以采用CNN的，何不尝试一下GoogleNet
 # 知识To Do.
 1. LSTM RNN GRU (应该会选择LSTM)
 2. Encoder-Decoder model
