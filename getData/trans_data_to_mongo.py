@@ -27,7 +27,7 @@ def readDirectory(path:str, col:pymongo.collection.Collection):
                     maxTime = max(time)
                     # 0.04 is two period of sample period.
                     minTime = maxTime - 2*period
-                    sample_points_amount = 40
+                    sample_points_amount = 400
                     timeAxis = np.linspace(minTime, maxTime, sample_points_amount)
                     resampled_data = np.interp(timeAxis, time, data)
                     dataDict[k] = resampled_data.tolist()
