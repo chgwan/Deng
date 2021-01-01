@@ -54,7 +54,9 @@ class ParallelNet(nn.Module):
                         Inception(832, 384, (192, 384), (48, 128), 128),
                         nn.AdaptiveMaxPool2d((1,1)),
                         nn.Flatten())
-        self.dense = nn.Linear(1024, output_size)
+        self.dense = nn.Sequential(nn.Linear(1024, output_size),
+                                    nn.Sigmoid())
+
     def forward(self, x):
         x = self.b1(x)
         x = self.b2(x)
@@ -69,5 +71,6 @@ if __name__ == "__main__":
     X = torch.rand(size=(1, 1, 3, 20))
     Y = model(X)
     print(Y.size())
+    print(Y)
 
 
