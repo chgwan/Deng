@@ -59,6 +59,7 @@ class ParallelNet(nn.Module):
                                     nn.Sigmoid())
 
     def forward(self, x):
+        x = self.b0(x)
         x = self.b1(x)
         x = self.b2(x)
         x = self.b3(x)
